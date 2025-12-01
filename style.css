@@ -1,1 +1,189 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Dancing Script';
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- 1. HERO CONTAINER --- */
+.hero {
+  background: #6A7A5A;
+  min-height: 500px;
+  width: 100%;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  position: relative; 
+}
+
+/* --- 2. IMAGE STYLING --- */
+.hero > img {
+  width: 100%; 
+  height: 500px; 
+  object-fit: cover; 
+  display: block; 
+}
+
+/* --- 3. HERO CONTENT --- */
+.hero-content {
+    margin-top: -500px; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    width: 100%; 
+    height: 500px; 
+    color: rgb(11, 11, 11); 
+    z-index: 10;
+    text-align: center;
+}
+
+/* --- 4. TEXT/BUTTON STYLING --- */
+.hero-content h1{
+    font-size: 100px;
+  
+}
+.hero-content p {
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    font-size: 40px;
+}
+
+.hero-content p {
+    margin-bottom: 20px; 
+}
+
+
+
+.quote { 
+  background: #8DAF9B; 
+  height: 300px;
+  width: 100%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  font-size: 50px;
+}
+
+.mood-board {
+    background: #BED2BA;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    align-items: start;
+}
+
+.mood-board img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;  
+    border-radius: 10px;
+    display: block;
+    padding: 0;           
+    background: none;     
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+
+.mood-board img:hover {
+    transform: scale(1.03);
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+footer {
+  background: #AAC4BC;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .line {
+  width: 80%;
+  height: 1px;
+  background: #8ba59b;
+  margin: 0 auto 15px auto;
+}
+
+footer p {
+  color: #36443b;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+
+/* --- 5. BUTTON STYLES --- */
+.breath-btn {
+  background: #D7CBB2;
+  border-radius: 10px;
+  padding: 10px 15px;
+  border-color: black;
+  border-width: 0cap;
+  font-size: 40px ;
+}
+
+.breath-btn:hover {
+  background-color: #8DAF9B;
+  color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+  transition: linear 0.5s;
+}
+
+/* interactive section */
+.Interactive_Section {
+  background: #D7CBB2;
+  height: 700px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;      
+  overflow: hidden;        
+}
+
+/* breathing circle */
+.breathing-circle {
+  width: 150px;
+  height: 150px;
+  background: #8DAF9B;
+  border-radius: 50%;
+  animation: breathe 6s ease-in-out infinite;
+  z-index: 10;             
+}
+
+@keyframes breathe {
+  0%   { transform: scale(1);   opacity: 0.9; }
+  50%  { transform: scale(1.4); opacity: 1; }
+  100% { transform: scale(1);   opacity: 0.9; }
+}
+
+/* --- bubbles --- */
+.bubble {
+  position: absolute;
+  bottom: -40px;
+  width: 25px;
+  height: 25px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  animation: float 7s infinite ease-in;
+}
+
+.b1 { left: 20%; animation-duration: 8s; }
+.b2 { left: 40%; animation-duration: 6s; }
+.b3 { left: 60%; animation-duration: 9s; }
+.b4 { left: 80%; animation-duration: 7s; }
+
+@keyframes float {
+  0%   { transform: translateY(0) scale(1);   opacity: 0.7; }
+  100% { transform: translateY(-700px) scale(1.4); opacity: 0; }
+}
+
 
